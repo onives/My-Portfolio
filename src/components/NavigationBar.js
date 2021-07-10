@@ -1,12 +1,13 @@
 import React from 'react';
 import{Navbar, Nav, Container, Row, Col} from 'react-bootstrap';
+import logo from '../pics/logoNN.png'
 
 const NavigationBar = ()=>{
     return(
         <>
         <Navbar collapseOnSelect expand="lg" fixed="top" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">Logo</Navbar.Brand>
+            <Container fluid>
+                <Navbar.Brand href="#home"><img src={logo} alt="my logo" className='logo-nav'/></Navbar.Brand>
                 <Navbar.Brand href="#home">Switch</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
