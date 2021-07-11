@@ -1,4 +1,3 @@
-
 :root{
     --main-bg-color: #F7E8EC;
     --main-txt-color: #442946;
@@ -46,9 +45,34 @@ body{
     
 }
 
-/* Navigation */
+/* Navigation bar styles */
 .logo-nav{
     width: 35%;
     height: auto;
     border-radius: 50%;
+}
+.navbar{
+    background: inherit;
+    border: none;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5); 
+}
+.nav-link, .navbar-brand{
+    font-size: 18px;
+    color: var(--main-txt-color) !important;
+}
+.navbar-toggler, .navbar-toggler-icon{
+    color: var(--main-bg-color);
+    background-color: var(--main-txt-color);
+}
+/* navbar switch */
+.custom-control-input:checked ~ .custom-control-label::before{
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
+}
+.custom-control-label::before{
+    background-color: var(--main-txt-color);
+    border-color: var(--main-txt-color);
+}
+#switch-mode{
+    width: 50px;
 }
