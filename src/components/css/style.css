@@ -1,4 +1,4 @@
-:root{
+html{
     --main-bg-color: #F7E8EC;
     --main-txt-color: #442946;
     --footer-bg-color: #2F2A2F;
@@ -13,6 +13,21 @@
     --form-bg-color: white;
     --form-text-color: #442946;
     --div-hover-color: white;
+}
+html.dark{
+    --main-bg-color: #121212;
+    --main-txt-color: #eaeaea;
+    --footer-bg-color: #2F2A2F;
+    --btn-txt-color: #eaeaea;
+    --grid-bg-color:#313131;
+    --main-grid-bg-color: #f8f1f3;
+    --txt-deco-color:  #8e44ad;
+    --box-shadow-color: rgb(15, 15, 15);
+    --btn-bg-color: #ffbd39;
+    --form-bg-color: #2F2A2F;
+    --form-text-color: #eaeaea;
+    --div-hover-color:#5c5b5b;
+    
 }
 /* removes the horizontal scroll issue on larger screen but not mobile version */
 *{
@@ -29,22 +44,23 @@ body{
     color: var(--main-txt-color);
     font-family: 'Quicksand', sans-serif;
 }
-.dark-theme{
-    --main-bg-color: #121212;
-    --main-txt-color: #eaeaea;
-    --footer-bg-color: #2F2A2F;
-    --btn-txt-color: #eaeaea;
-    --grid-bg-color:#313131;
-    --main-grid-bg-color: #f8f1f3;
-    --txt-deco-color:  #8e44ad;
-    --box-shadow-color: rgb(15, 15, 15);
-    --btn-bg-color: #ffbd39;
-    --form-bg-color: #2F2A2F;
-    --form-text-color: #eaeaea;
-    --div-hover-color:#5c5b5b;
-    
-}
 
+@media (prefers-color-scheme: dark) {
+    html{
+        --main-bg-color: #121212;
+        --main-txt-color: #eaeaea;
+        --footer-bg-color: #2F2A2F;
+        --btn-txt-color: #eaeaea;
+        --grid-bg-color:#313131;
+        --main-grid-bg-color: #f8f1f3;
+        --txt-deco-color:  #8e44ad;
+        --box-shadow-color: rgb(15, 15, 15);
+        --btn-bg-color: #ffbd39;
+        --form-bg-color: #2F2A2F;
+        --form-text-color: #eaeaea;
+        --div-hover-color:#5c5b5b;
+    }
+}
 /* Navigation bar styles */
 .logo-nav{
     width: 35%;
@@ -70,7 +86,7 @@ body{
     border-radius: 15px;
 }
 .navbar-collapse .nav-link:hover{
-    background-image: url("../css/picss/one.jpg");
+    background-image: url("../../pics/one.jpg");
     background-clip: border-box;
     -webkit-background-clip: border-box;
     color: var(--btn-txt-color) !important;
@@ -78,8 +94,8 @@ body{
 }
 /* navbar switch */
 .custom-control-input:checked ~ .custom-control-label::before{
-    background-color: var(--main-bg-color);
-    border-color: var(--main-bg-color);
+    background-color: var(--txt-deco-color);
+    /* border-color: var(--main-txt-color); */
 }
 .custom-control-label::before{
     background-color: var(--main-txt-color);

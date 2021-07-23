@@ -1,17 +1,45 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
+import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import{Navbar, Nav, Container, Row, Col, Form} from 'react-bootstrap';
 import logo from '../pics/logoNN.png'
 
-const NavigationBar = ({onChange})=>{
+
+const DARK_CLASS = "dark";
+
+const NavigationBar = ()=>{
+    const systemPrefersDark = useMediaQuery(
+        {
+          query: "(prefers-color-scheme: dark)"
+        },
+        undefined,
+        prefersDark => {
+          setIsDark(prefersDark);
+        }
+      );
+
+    const [isDark, setIsDark] = useState(systemPrefersDark);
+
+    useEffect(() => {
+
+        if (isDark) {
+            document.documentElement.classList.add(DARK_CLASS)
+        } else {
+            document.documentElement.classList.remove(DARK_CLASS)
+        }
+        }, [isDark]);
+
+    const changeTheme = ()=>{
+        setIsDark(!isDark)
+    }
     return(
         <>
         <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
             <Container fluid>
                 <Navbar.Brand href="#home"><img src={logo} alt="my logo" className='logo-nav'/></Navbar.Brand>
-                <Navbar.Brand><Form.Check onClick={onChange} type='switch' label={<FontAwesomeIcon icon={faMoon} size="1.5x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
+                <Navbar.Brand><Form.Check onChange={changeTheme} type='switch' label={<FontAwesomeIcon icon={isDark ? faSun : faMoon} size="1.5x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto py-3">
