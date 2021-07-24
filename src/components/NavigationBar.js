@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react';
+import {LinkContainer} from 'react-router-bootstrap'
 import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
@@ -39,14 +40,15 @@ const NavigationBar = ()=>{
         <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
             <Container fluid>
                 <Navbar.Brand href="#home"><img src={logo} alt="my logo" className='logo-nav'/></Navbar.Brand>
-                <Navbar.Brand><Form.Check onChange={changeTheme} type='switch' label={<FontAwesomeIcon icon={isDark ? faSun : faMoon} size="1.5x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
+                <Navbar.Brand><Form.Check onChange={changeTheme} type='switch' label={<FontAwesomeIcon icon={isDark ? faSun : faMoon} size="1x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ml-auto py-3">
-                        <Nav.Link href="#about" className="px-4">about</Nav.Link>
-                        <Nav.Link href="#projects" className="px-4" >projects</Nav.Link>
-                        <Nav.Link href="#blogs" className="px-4">blogs</Nav.Link>
-                        <Nav.Link href="#contact"className="px-4" >contact</Nav.Link>
+                    <Nav className="ml-auto py-2">
+                        <LinkContainer to='/'><Nav.Link className="px-4">about</Nav.Link></LinkContainer>
+                        <LinkContainer to='projects'><Nav.Link className="px-4" >projects</Nav.Link></LinkContainer>
+                        <LinkContainer to='blogs'><Nav.Link className="px-4">blogs</Nav.Link></LinkContainer>
+                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact</Nav.Link></LinkContainer>
+                        
                         <Row className="justify-content-center">
                             <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
                             <Col><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link></Col>

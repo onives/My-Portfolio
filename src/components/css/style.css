@@ -68,7 +68,7 @@ body{
     border-radius: 50%;
 }
 .navbar{
-    background: inherit;
+    background: var(--main-bg-color);
     border: none;
     box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.5); 
 }
@@ -94,13 +94,67 @@ body{
 }
 /* navbar switch */
 .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: var(--main-txt-color);
+}
+.custom-switch .custom-control-input:checked~.custom-control-label::after{
     background-color: var(--txt-deco-color);
-    /* border-color: var(--main-txt-color); */
 }
 .custom-control-label::before{
     background-color: var(--main-txt-color);
     border-color: var(--main-txt-color);
 }
+.custom-switch .custom-control-label::before{
+    width: 42px;
+    height: 25px;
+    border-radius: 34px;
+}
+.custom-switch .custom-control-label::after{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+.fa-moon, .fa-sun{
+    margin-left: 1rem;
+}
+.fa-1x{
+    font-size: 1.7rem;
+}
 #switch-mode{
     width: 50px;
+}
+
+/* Project card styles */
+
+.project-card{
+    background-color: var(--grid-bg-color);
+    border-color: var(--main-bg-color);
+    box-shadow: 2px 2px 6px 1px var(--box-shadow-color);
+}
+.project-card:hover{
+    border-bottom: 2px solid var(--main-txt-color);
+    background-color: var(--div-hover-color); 
+    box-shadow: 5px 5px 5px 2px var(--box-shadow-color);
+}
+.project-card-btn{
+    color: var(--main-txt-color);
+    padding: 4px 15px;
+    border-radius: 15px;
+    width: 40%;
+    background-color: var(--btn-bg-color);
+    border: none;
+    box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+.project-card-btn:hover{
+    background-image: url("../../pics/one.jpg");
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    text-align: center;
+    color: var(--btn-txt-color);
+}
+.card-column{
+    margin-top: 2rem;
+}
+.projects-div{
+    margin-top: 10rem;
+    margin-bottom: 4rem;
 }
