@@ -47,12 +47,13 @@ const NavigationBar = ()=>{
                         <LinkContainer to='/'><Nav.Link className="px-4">about</Nav.Link></LinkContainer>
                         <LinkContainer to='projects'><Nav.Link className="px-4" >projects</Nav.Link></LinkContainer>
                         <LinkContainer to='blogs'><Nav.Link className="px-4">blogs</Nav.Link></LinkContainer>
-                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact</Nav.Link></LinkContainer>
+                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact👋</Nav.Link></LinkContainer>
                         
                         <Row className="justify-content-center">
                             <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
                             <Col><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link></Col>
                             <Col><Nav.Link href="https://www.instagram.com/nives__olive/?hl=en" target='_blank'><FontAwesomeIcon icon={faInstagram} size="2x"/></Nav.Link></Col>
+                        
                         </Row>   
                     </Nav>
                 </Navbar.Collapse>

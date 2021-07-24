@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ProjectCard from './ProjectCard';
-import{Container, Row, Col } from 'react-bootstrap';
-
+import{Container, Row } from 'react-bootstrap';
+import FooterLayout from './FooterLayout';
 
 const current_projects = [
     {
@@ -39,22 +39,25 @@ const ProjectLayout = ()=>{
     const [projects, setProjects] = useState(current_projects);
 
     return(
-        <div className="container-div">
-            <Container>
-                <Row>
-                    {projects.length &&
-                        projects.map((project) => (
-                        <ProjectCard
-                            image={project.image}
-                            title={project.title}
-                            description={project.description}
-                            githubLink={project.githubLink}
-                            siteLink={project.siteLink}
-                        />
-                    ))}
-                </Row>
-            </Container> 
-        </div>
+        <>
+            <div className="container-div">
+                <Container>
+                    <Row>
+                        {projects.length &&
+                            projects.map((project) => (
+                            <ProjectCard
+                                image={project.image}
+                                title={project.title}
+                                description={project.description}
+                                githubLink={project.githubLink}
+                                siteLink={project.siteLink}
+                            />
+                        ))}
+                    </Row>
+                </Container> 
+            </div>
+            <FooterLayout />
+        </>
     )
 }
 export default ProjectLayout
