@@ -39,7 +39,7 @@ const ProjectLayout = ()=>{
     const [projects, setProjects] = useState(current_projects);
 
     return(
-        <div className="projects-div">
+        <div className="container-div">
             <Container>
                 <Row>
                     {projects.length &&

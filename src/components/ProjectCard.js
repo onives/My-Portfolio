@@ -5,8 +5,8 @@ const ProjectCard = ({image, title, description, githubLink, siteLink})=>{
 
     return(
         <>
-        <Col className="card-column">
-            <Card style={{ width: '21rem' }} className="project-card">
+        <Col className="card-column" md={4} sm={12}>
+            <Card className="project-card">
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
