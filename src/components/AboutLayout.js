@@ -1,16 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import{Card} from 'react-bootstrap';
 import{Container, Row, Col} from 'react-bootstrap';
 import aboutPic from '../pics/one.jpg';
-import FooterLayout from './FooterLayout'
+import FooterLayout from './FooterLayout';
+
+const initial_bio = 'this is some motherfucking bio that i just made up to you know, have something to work with'
+let nameDesign = '<Nameere Olive Nives />';
+
 const AboutLayout = ()=>{
+    const [bio, setBio] = useState(initial_bio);
+
     return(
         <>
             <div className="container-div">
                 <Container>
                     <Row>
-                        <Col md={6} >
-                            
+                        <Col md={6} className="biography">
+                            <div><h2 className="titles">{nameDesign}</h2></div>
+                            <div className="bio-div">
+                                <p className="bio-paragraph">{bio}</p>
+                            </div>
                         </Col>
                         <Col md={6}>
                             <Card className="about-card">
@@ -27,8 +36,8 @@ const AboutLayout = ()=>{
                         </Col>
                     </Row>
                 </Container>
-        </div>
-        <FooterLayout/>
+            </div>
+            <FooterLayout/>
        </>
     )
 }

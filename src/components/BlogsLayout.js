@@ -36,7 +36,9 @@ const BlogsLayout = ()=>{
 
     return(
         <>
+       
             <div className="container-div">
+                <h2 className="titles">My Blogs</h2>
                 <Container>
                     <Row>
                         {blogs.length &&

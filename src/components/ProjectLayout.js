@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ProjectCard from './ProjectCard';
 import{Container, Row } from 'react-bootstrap';
 import FooterLayout from './FooterLayout';
+import axios from 'axios';
 
 const current_projects = [
     {
@@ -38,9 +39,18 @@ const current_projects = [
 const ProjectLayout = ()=>{
     const [projects, setProjects] = useState(current_projects);
 
+   useEffect(()=>{
+    axios.get("http://localhost:4000/projects/all")
+    .then(res=>{
+        setProjects(res.data)
+    })
+   }, [])
+
     return(
         <>
+            
             <div className="container-div">
+                <h2 className="titles">My Projects</h2>
                 <Container>
                     <Row>
                         {projects.length &&

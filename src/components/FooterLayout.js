@@ -1,8 +1,8 @@
 import React from 'react';
-import { faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import{Navbar, Nav, Container, Row, Col, Form} from 'react-bootstrap';
+import{Navbar, Nav, Container, Row, Col} from 'react-bootstrap';
 
 
 const FooterLayout = ()=>{
@@ -18,7 +18,6 @@ const FooterLayout = ()=>{
                 <Row className="justify-content-center">
                     <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
                     <Col><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link></Col>
-                    <Col><Nav.Link href="https://www.instagram.com/nives__olive/?hl=en" target='_blank'><FontAwesomeIcon icon={faInstagram} size="2x"/></Nav.Link></Col>
                         
                 </Row>  
             </Nav>
