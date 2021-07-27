@@ -38,7 +38,11 @@ const BlogsLayout = ()=>{
         <>
        
             <div className="container-div">
-                <h2 className="titles">My Blogs</h2>
+                <div className="section-paragraph-div">
+                    <h2 className="titles">My Blogs</h2>
+                    <p className="section-paragraph">some text here........masnn jshd jjwjhd sbbxggsjk jh h  jsii hhs js nn
+                    bb </p>
+                </div>
                 <Container>
                     <Row>
                         {blogs.length &&

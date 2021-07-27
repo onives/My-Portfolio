@@ -1,7 +1,7 @@
 html{
     --main-bg-color: #F7E8EC;
     --main-txt-color: #442946;
-    --footer-bg-color: #2F2A2F;
+    --footer-bg-color: #f5f3f3;
     --body-font: 20px;
     --btn-txt-color: white;
     --grid-bg-color: rgb(248, 246, 246);
@@ -105,6 +105,10 @@ body{
     height: 13vh;
     
 }
+.container-div{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
 .main-btn{
     border-radius: 15px;
     padding: 10px 10px;
@@ -181,10 +185,7 @@ body{
 .card-column{
     margin-top: 2rem;
 }
-.container-div{
-    margin-top: 13rem;
-    margin-bottom: 5rem;
-}
+
 
 /* blogs section */
 
@@ -218,11 +219,45 @@ body{
     
 }
 
+/* contact section */
+.contact-me{
+
+}
+.section-paragraph{
+    width:70%;
+    margin: auto;
+    text-align: center;
+}
+.section-paragraph-div{
+    margin-bottom: 3.5rem;
+}
+.isLoading{
+    color: rgb(165, 54, 165);
+    padding: 10px 0 10px 0;
+    margin: 1px;  
+}
+.successful-alert{
+    color: green;
+    border: 1px solid green;
+    padding: 10px 0 10px 10px;
+    margin-top: 2rem;
+    background-color: #fdf6f6;
+}
+.unsuccessful-alert{
+    color: #c20707;
+    border: 1px solid #c20707;
+    padding: 10px 0 10px 10px;
+    margin-top: 2rem;
+    background-color: #fdf6f6;
+}
+.wrong-email{
+    color: #c20707 !important;
+    padding: 5px 0 5px 5px;
+}
 /* footer */
 
 #footer{
-    height: 10vh;
-    background: inherit;
+    background: var(--footer-bg-color);
     color: var(--btn-txt-color) !important;
     margin-bottom: 0;
 }
@@ -238,5 +273,10 @@ body{
     }
     .bio-div{
         margin-bottom: 3rem;
+    }
+    .get-in-touch{
+        width:90%;
+        margin: auto;
+        text-align: left;
     }
 }

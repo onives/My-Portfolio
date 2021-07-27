@@ -14,7 +14,7 @@ const FooterLayout = ()=>{
             <Navbar.Brand>
                 <p>&copy; Created with <FontAwesomeIcon icon={faHeart} size="0.9x"/> by Nives</p>
             </Navbar.Brand>
-            <Nav className="ml-auto py-2">
+            <Nav className="ml-auto">
                 <Row className="justify-content-center">
                     <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
                     <Col><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link></Col>
