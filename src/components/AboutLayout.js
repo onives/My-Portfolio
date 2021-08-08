@@ -1,14 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import{Card} from 'react-bootstrap';
 import{Container, Row, Col} from 'react-bootstrap';
 import aboutPic from '../pics/one.jpg';
 import FooterLayout from './FooterLayout';
+import axios from 'axios';
+import env from 'react-dotenv';
 
 const initial_bio = 'this is some motherfucking bio that i just made up to you know, have something to work with'
 let nameDesign = '<Nameere Olive Nives />';
 
 const AboutLayout = ()=>{
     const [bio, setBio] = useState(initial_bio);
+
+    useEffect(()=>{
+        axios.get(`${env.remoteApi}user/me/${env.myId}`)
+        .then(res=>{
+            console.log(res.data)
+            setBio(res.data.bio)
+        })
+    }, [])
 
     return(
         <>

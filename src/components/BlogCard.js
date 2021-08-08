@@ -7,14 +7,14 @@ const BlogCard = ({image, title, description, siteLink})=>{
         <>
         <Col className="card-column" md={4} sm={12}>
             <Card className="blog-card">
-                <Card.Img src={image} alt="Blog image" />
-                <Card.ImgOverlay>
+            <Card.Img variant="top" src={image} />
+                <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {description}
                     </Card.Text>
-                    <Card.Link href={siteLink} className="blog-card-btn" target="_blank">Blog Link</Card.Link>
-                </Card.ImgOverlay>
+                    <Card.Link href={siteLink} className="blog-card-btn" target="_blank">Site Link</Card.Link>
+                </Card.Body>
             </Card>
         </Col>
         </>

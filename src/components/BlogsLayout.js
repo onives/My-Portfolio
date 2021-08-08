@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import BlogCard from './BlogCard';
 import{Container, Row } from 'react-bootstrap';
 import FooterLayout from './FooterLayout';
-
+import env from 'react-dotenv';
+import axios from 'axios';
 
 const current_blogs = [
     {
@@ -32,7 +33,14 @@ const current_blogs = [
   ];
 
 const BlogsLayout = ()=>{
-    const [blogs, setBlogs] = useState(current_blogs);
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(()=>{
+        axios.get(`${env.remoteApi}blogs/all`)
+        .then(res=>{
+            setBlogs(res.data)
+        })
+       }, [])
 
     return(
         <>
@@ -40,8 +48,9 @@ const BlogsLayout = ()=>{
             <div className="container-div">
                 <div className="section-paragraph-div">
                     <h2 className="titles">My Blogs</h2>
-                    <p className="section-paragraph">some text here........masnn jshd jjwjhd sbbxggsjk jh h  jsii hhs js nn
-                    bb </p>
+                    <p className="section-paragraph">I love to write about my journey as a self taught developer hoping to educate
+                    as well as inspire anyone out there interested in taking on a caree in tech. Here are some of the blogs I've written so far. 
+                    </p>
                 </div>
                 <Container>
                     <Row>

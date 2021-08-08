@@ -38,11 +38,9 @@ const ContactPage = ()=>{
         })
         .catch(error =>{
             setLoading(false)
-            setWrongEmail(true)
             console.log(error)
             setTimeout(()=>{
                     setFailure(false)
-                    setWrongEmail(false)
                 }, 5000)
             setFailure(true)
         })
@@ -59,7 +57,7 @@ const ContactPage = ()=>{
                 <div className="section-paragraph-div">
                     <h2 className="titles">Get in touch</h2>
                     <p className="section-paragraph">Are you in need of an application that gets results? Maybe you just want to say hello? Feel free to reach out to me and let's talk.
-                    My DMs are also open on Twitter (link below) if you prefer to chat there</p>
+                    My DMs are also open on Twitter and/or linkedIn (link below) if you prefer to chat there</p>
                     
                 </div>
            

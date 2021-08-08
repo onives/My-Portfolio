@@ -3,44 +3,13 @@ import ProjectCard from './ProjectCard';
 import{Container, Row } from 'react-bootstrap';
 import FooterLayout from './FooterLayout';
 import axios from 'axios';
-
-const current_projects = [
-    {
-      image: "nn.png",
-      title: "title1",
-      description: "description 1",
-      githubLink: "link1",
-      siteLink: "link22"
-    },
-    {
-      image: "njj.png",
-      title: "title2",
-      description: "description 2",
-      githubLink: "link2",
-      siteLink: "link33"
-    },
-    {
-        image: "njj.png",
-        title: "title2",
-        description: "description 2",
-        githubLink: "link2",
-        siteLink: "link33"
-    },
-    {
-        image: "njj.png",
-        title: "title2",
-        description: "description 2",
-        githubLink: "link2",
-        siteLink: "link33"
-    },
-  
-];
+import env from 'react-dotenv';
 
 const ProjectLayout = ()=>{
-    const [projects, setProjects] = useState(current_projects);
+    const [projects, setProjects] = useState([]);
 
    useEffect(()=>{
-    axios.get("http://localhost:4000/projects/all")
+    axios.get(`${env.remoteApi}projects/all`)
     .then(res=>{
         setProjects(res.data)
     })
@@ -51,9 +20,10 @@ const ProjectLayout = ()=>{
             
             <div className="container-div">
                 <div className="section-paragraph-div">
-                    <h2 className="titles">My works</h2>
-                    <p className="section-paragraph">some text here........masnn jshd jjwjhd sbbxggsjk jh h  jsii hhs js nn
-                    bb </p>
+                    <h2 className="titles">My Recent works</h2>
+                    <p className="section-paragraph">From HTMl, CSS, Bootstrap to React.js, 
+                    Context-Api, Node.js, Firebase and MongoDB. Check out some of my latest Projects 
+                    I've worked on recently. Want to know more? DM me :) </p>
                     
                 </div>
                 <Container>
