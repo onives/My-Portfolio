@@ -6,11 +6,10 @@ import FooterLayout from './FooterLayout';
 import axios from 'axios';
 import env from 'react-dotenv';
 
-const initial_bio = 'this is some motherfucking bio that i just made up to you know, have something to work with'
 let nameDesign = '<Nameere Olive Nives />';
 
 const AboutLayout = ()=>{
-    const [bio, setBio] = useState(initial_bio);
+    const [bio, setBio] = useState('');
 
     useEffect(()=>{
         axios.get(`${env.remoteApi}user/me/${env.myId}`)

@@ -9,7 +9,7 @@ const ProjectLayout = ()=>{
     const [projects, setProjects] = useState([]);
 
    useEffect(()=>{
-    axios.get(`${env.remoteApi}projects/all`)
+    axios.get(`${env.remoteApi}projects/me/${env.myId}`)
     .then(res=>{
         setProjects(res.data)
     })
@@ -21,9 +21,9 @@ const ProjectLayout = ()=>{
             <div className="container-div">
                 <div className="section-paragraph-div">
                     <h2 className="titles">My Recent works</h2>
-                    <p className="section-paragraph">From HTMl, CSS, Bootstrap to React.js, 
-                    Context-Api, Node.js, Firebase and MongoDB. Check out some of my latest Projects 
-                    I've worked on recently. Want to know more? DM me :) </p>
+                    <p className="section-paragraph"> Check out some of my personal projects 
+                    I've worked on using: React.js, HTMl, CSS, Bootstrap, React-Bootstrap
+                    Context-Api, Node.js, Firebase, MongoDB etc... Want to discus any project further? DM me :) </p>
                     
                 </div>
                 <Container>

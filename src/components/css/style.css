@@ -120,6 +120,16 @@ body{
     color: var(--btn-txt-color);
     border: none;
 }
+.section-paragraph{
+    width:50%;
+    margin: auto;
+    text-align: center;
+    line-height: 2rem;
+}
+.section-paragraph-div{
+    margin-bottom: 3.5rem;
+    
+}
 
 /* navbar switch */
 .custom-control-input:checked ~ .custom-control-label::before{
@@ -224,14 +234,7 @@ body{
 .contact-me{
 
 }
-.section-paragraph{
-    width:70%;
-    margin: auto;
-    text-align: center;
-}
-.section-paragraph-div{
-    margin-bottom: 3.5rem;
-}
+
 .isLoading{
     color: rgb(165, 54, 165);
     padding: 10px 0 10px 0;
@@ -279,5 +282,9 @@ body{
         width:90%;
         margin: auto;
         text-align: left;
+    }
+    .section-paragraph{
+        width: 90%;
+        margin: auto;
     }
 }

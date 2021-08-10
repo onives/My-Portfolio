@@ -5,38 +5,11 @@ import FooterLayout from './FooterLayout';
 import env from 'react-dotenv';
 import axios from 'axios';
 
-const current_blogs = [
-    {
-      image: "nn.png",
-      title: "title1",
-      description: "description 1",
-      link: "link1",
-    },
-    {
-      image: "njj.png",
-      title: "title2",
-      description: "description 2",
-      link: "link2",
-    },
-    {
-        image: "njj.png",
-        title: "title2",
-        description: "description 2",
-        link: "link2",
-    },
-    {
-        image: "njj.png",
-        title: "title2",
-        description: "description 2",
-        link: "link2",
-    },
-  ];
-
 const BlogsLayout = ()=>{
     const [blogs, setBlogs] = useState([]);
 
     useEffect(()=>{
-        axios.get(`${env.remoteApi}blogs/all`)
+        axios.get(`${env.remoteApi}blogs/me/${env.myId}`)
         .then(res=>{
             setBlogs(res.data)
         })
@@ -48,8 +21,8 @@ const BlogsLayout = ()=>{
             <div className="container-div">
                 <div className="section-paragraph-div">
                     <h2 className="titles">My Blogs</h2>
-                    <p className="section-paragraph">I love to write about my journey as a self taught developer hoping to educate
-                    as well as inspire anyone out there interested in taking on a caree in tech. Here are some of the blogs I've written so far. 
+                    <p className="section-paragraph">I love to write about my journey as a self taught developer hoping to educate, guide
+                    as well as inspire anyone out there interested in taking on a career in tech. Here are some of the blogs I've written so far. 
                     </p>
                 </div>
                 <Container>
