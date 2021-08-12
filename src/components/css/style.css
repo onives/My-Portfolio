@@ -229,12 +229,24 @@ body{
 .bio-div{
     
 }
+.card-img-overlay{
+    top: 6rem;
+    color: rgb(243, 232, 232);
+}
+.about-welcome{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px rgba(26, 25, 25, 0.5);
+}
 
 /* contact section */
 .contact-me{
 
 }
-
+.form-control{
+    background-color: var(--form-bg-color);
+    color: var(--form-txt-color);
+    border: none;
+}
 .isLoading{
     color: rgb(165, 54, 165);
     padding: 10px 0 10px 0;
@@ -273,7 +285,7 @@ body{
         margin-bottom: 5rem;
     }
     .titles{
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .bio-div{
         margin-bottom: 3rem;
@@ -286,5 +298,15 @@ body{
     .section-paragraph{
         width: 90%;
         margin: auto;
+    }
+    .contact-me{
+        margin-bottom: 3rem;
+    }
+    .card-img-overlay{
+        top: 3.5rem;
+       
+    }
+    .about-welcome{
+        font-size: 2.2rem;
     }
 }

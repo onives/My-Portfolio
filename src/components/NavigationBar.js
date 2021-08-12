@@ -19,22 +19,28 @@ const NavigationBar = ()=>{
         prefersDark => {
           setIsDark(prefersDark);
         }
-      );
+    );
 
     const [isDark, setIsDark] = useState(systemPrefersDark);
 
-    useEffect(() => {
+    if (localStorage.getItem('dark-theme')) {
+        document.documentElement.classList.add(DARK_CLASS)
+    }
 
+    useEffect(() => {
         if (isDark) {
             document.documentElement.classList.add(DARK_CLASS)
+            localStorage.setItem('dark-theme', true);
         } else {
             document.documentElement.classList.remove(DARK_CLASS)
+            localStorage.removeItem('dark-theme');
         }
-        }, [isDark]);
+    }, [isDark]);
 
     const changeTheme = ()=>{
         setIsDark(!isDark)
     }
+    
     return(
         <>
         <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
@@ -47,7 +53,7 @@ const NavigationBar = ()=>{
                         <LinkContainer to='/'><Nav.Link className="px-4">about</Nav.Link></LinkContainer>
                         <LinkContainer to='projects'><Nav.Link className="px-4" >projects</Nav.Link></LinkContainer>
                         <LinkContainer to='blogs'><Nav.Link className="px-4">blogs</Nav.Link></LinkContainer>
-                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact👋</Nav.Link></LinkContainer>
+                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact 👋</Nav.Link></LinkContainer>
                         
                         <Row className="justify-content-center">
                             <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
