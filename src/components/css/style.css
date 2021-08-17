@@ -67,9 +67,7 @@ body{
     height: auto;
     border-radius: 50%;
 }
-.logo-brand{
-    width: 35%;
-}
+
 .navbar{
     background: var(--main-bg-color);
     border: none;
@@ -278,8 +276,13 @@ body{
 
 #footer{
     background: var(--footer-bg-color);
-    color: var(--btn-txt-color) !important;
+    color: var(--main-txt-color);
     margin-bottom: 0;
+    box-shadow: 1px 1px 6px 0px var(--box-shadow-color); 
+}
+    
+.footer-p{
+    padding: 0.7rem;
 }
 
 /* media queries */
@@ -289,7 +292,7 @@ body{
         margin-bottom: 5rem;
     }
     .titles{
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
     .bio-div{
         margin-bottom: 3rem;
@@ -313,7 +316,7 @@ body{
     .about-welcome{
         font-size: 2.2rem;
     }
-    .biography{
+    /* .biography{
         margin-top: 3rem;
-    }
+    } */
 }
