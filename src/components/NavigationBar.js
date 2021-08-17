@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import{Navbar, Nav, Container, Row, Col, Form} from 'react-bootstrap';
-import logo from '../pics/logoNN.png'
+import logo from '../pics/logoNN.png';
 
 
 const DARK_CLASS = "dark";
@@ -23,9 +23,9 @@ const NavigationBar = ()=>{
 
     const [isDark, setIsDark] = useState(systemPrefersDark);
 
-    if (localStorage.getItem('dark-theme')) {
-        document.documentElement.classList.add(DARK_CLASS)
-    }
+    // if (localStorage.getItem('dark-theme')) {
+    //     document.documentElement.classList.add(DARK_CLASS)
+    // }
 
     useEffect(() => {
         if (isDark) {
@@ -35,6 +35,7 @@ const NavigationBar = ()=>{
             document.documentElement.classList.remove(DARK_CLASS)
             localStorage.removeItem('dark-theme');
         }
+        
     }, [isDark]);
 
     const changeTheme = ()=>{
