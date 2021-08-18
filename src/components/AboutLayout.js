@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import{Card} from 'react-bootstrap';
-import{Container, Row, Col} from 'react-bootstrap';
+import{Container, Row, Col, Card, Image} from 'react-bootstrap';
 import aboutPic from '../pics/one.jpg';
 // import starPic from '../pics/star.JPG'
 import FooterLayout from './FooterLayout';
@@ -23,24 +22,17 @@ const AboutLayout = ()=>{
     return(
         <>
             <div className="container-div">
+                <div className="bio-div">
+                    <h2 className="titles">{nameDesign}</h2>
+                    <p className="bio-paragraph">{bio}</p>
+                </div>
                 <Container>
                     <Row>
-                        <Col md={6} className="biography">
-                            <div><h2 className="titles">{nameDesign}</h2></div>
-                            <div className="bio-div">
-                                <p className="bio-paragraph">{bio}</p>
-                            </div>
-                        </Col>
                         <Col md={6}>
-                            <Card className="about-card">
-                                <Card.Img src={aboutPic} alt="Card image" />
-                                <Card.ImgOverlay>
-                                    <Card.Title className="about-welcome">It's good to see you here... </Card.Title>
-                                    <Card.Text>
-                                    
-                                    </Card.Text>
-                                </Card.ImgOverlay>
-                            </Card>
+                            <div><Image src={aboutPic} thumbnail className="pentagon-pic"/></div>
+                        </Col>
+                        <Col md={6} className="biography">
+                            
                         </Col>
                     </Row>
                 </Container>

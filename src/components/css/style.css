@@ -244,7 +244,19 @@ body{
 }
 .bio-paragraph{
     line-height: 2rem;
+    /* margin-bottom: 3rem; */
 }
+.bio-div{
+    text-align: center;
+    width: 70%;
+    margin: auto auto 3rem auto;
+}
+.pentagon-pic{
+    /* to the left */
+    -webkit-clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%);
+}
+
 
 /* contact section */
 .contact-me{
@@ -301,10 +313,11 @@ body{
         font-size: 1.7rem;
     }
     .bio-div{
-        margin-bottom: 3rem;
+        width: 85%;
+        margin: auto auto 3rem auto;
     }
     .get-in-touch{
-        width:90%;
+        width: 85%;
         margin: auto;
         text-align: left;
     }
@@ -325,4 +338,9 @@ body{
     /* .biography{
         margin-top: 3rem;
     } */
+    .pentagon-pic{
+        /* looking down */
+        -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0% 0, 0% 50%);
+        clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0% 0, 0% 50%)
+    }
 }
