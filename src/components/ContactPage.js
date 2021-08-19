@@ -26,8 +26,9 @@ const ContactPage = ({history})=>{
 
     const submitHandler =  (e)=>{
         e.preventDefault()
+        
         setLoading(true)
-        axios.post(`${env.remoteApi}contact"`, {name, email, message})
+        axios.post(`${env.remoteApi}contact`, {name, email, message})
       
         setTimeout(()=>{
             setSuccess(false)
