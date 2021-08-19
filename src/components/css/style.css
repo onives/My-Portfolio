@@ -253,10 +253,29 @@ body{
 }
 .pentagon-pic{
     /* to the left */
-    -webkit-clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
+.skills-icons{
+    width: 70%;
+    margin: 5rem auto;
+}
+.squiggle{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--txt-deco-color);
+}
+.bio-section2{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+.bio-section2-paragraph{
+    margin: 3rem auto auto auto;
+    font-size: 2rem;
+    font-weight: 550;
+}
 
 /* contact section */
 .contact-me{
@@ -340,7 +359,14 @@ body{
     } */
     .pentagon-pic{
         /* looking down */
-        -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0% 0, 0% 50%);
-        clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0% 0, 0% 50%)
+        -webkit-clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0% 0, 0% 70%);
+        clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0% 0, 0% 70%);
+    }
+    .skills-icons{
+        width: 95%;
+        margin: 5rem auto;
+    }
+    .bio-section2-paragraph{
+        font-size: 1.8rem;
     }
 }

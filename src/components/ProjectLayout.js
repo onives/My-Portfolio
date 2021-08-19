@@ -28,16 +28,16 @@ const ProjectLayout = ()=>{
                 </div>
                 <Container>
                     <Row>
-                        {projects.length &&
-                            projects.map((project) => (
-                            <ProjectCard
-                                image={project.image}
-                                title={project.title}
-                                description={project.description}
-                                githubLink={project.githubLink}
-                                siteLink={project.siteLink}
-                            />
-                        ))}
+                    {projects.map((project) => (
+                        <ProjectCard
+                            key={project._id}
+                            image={project.image}
+                            title={project.title}
+                            description={project.description}
+                            githubLink={project.githubLink}
+                            siteLink={project.siteLink}
+                        />
+                    ))}
                     </Row>
                 </Container> 
             </div>

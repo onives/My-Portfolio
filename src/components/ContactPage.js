@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import { Button, Row, Col, Container, Form } from 'react-bootstrap';
 import axios from 'axios';
 import FooterLayout from './FooterLayout';
+import env from 'react-dotenv';
 
-const ContactPage = ()=>{
-    const [fullName, setFullName] = useState('');
+const ContactPage = ({history})=>{
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('')
     const [success, setSuccess] = useState(false);
@@ -23,30 +24,22 @@ const ContactPage = ()=>{
         setEmail(e.target.value);
     }
 
-    const submitHandler = (e)=>{
+    const submitHandler =  (e)=>{
         e.preventDefault()
         setLoading(true)
-        
-        axios.post("/contact", {fullName, email, message})
-        .then(res=>{
-            setLoading(false)
-            console.log(res)
-            setTimeout(()=>{
-                setSuccess(false)
-            }, 2000)
-            setSuccess(true)
-        })
-        .catch(error =>{
-            setLoading(false)
-            console.log(error)
-            setTimeout(()=>{
-                    setFailure(false)
-                }, 5000)
-            setFailure(true)
-        })
-       
+        axios.post(`${env.remoteApi}contact"`, {name, email, message})
+      
+        setTimeout(()=>{
+            setSuccess(false)
+            history.push('/')
+        }, 5000)
 
-       setFullName('');
+        setTimeout(()=>{
+            setSuccess(true)
+            setLoading(false)
+        }, 2000)
+
+       setName('');
        setEmail('');
        setMessage('');
     }
@@ -79,7 +72,7 @@ const ContactPage = ()=>{
                     <Form onSubmit={submitHandler} method="post" action="/contact">
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Your Name:</Form.Label>
-                            <Form.Control value={fullName} type="text" placeholder="Enter Full Name" onChange={(e)=>{setFullName(e.target.value)}}/>
+                            <Form.Control value={name} type="text" placeholder="Enter Full Name" onChange={(e)=>{setName(e.target.value)}}/>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Your Email:</Form.Label>

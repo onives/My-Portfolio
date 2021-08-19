@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import{ Nav, Container, Row, Col} from 'react-bootstrap';
+import{ Container, Row, Col} from 'react-bootstrap';
 
 
 const FooterLayout = ()=>{

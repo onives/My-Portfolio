@@ -11,6 +11,7 @@ const BlogsLayout = ()=>{
     useEffect(()=>{
         axios.get(`${env.remoteApi}blogs/me/${env.myId}`)
         .then(res=>{
+            console.log(res.data)
             setBlogs(res.data)
         })
        }, [])
@@ -21,21 +22,21 @@ const BlogsLayout = ()=>{
             <div className="container-div">
                 <div className="section-paragraph-div">
                     <h2 className="titles">My Blogs</h2>
-                    <p className="section-paragraph">I love to write about my journey as a self taught developer hoping to educate, guide
+                    <p className="section-paragraph">I mostly write to educate, guide
                     as well as inspire anyone out there interested in taking on a career in tech. Here are some of the blogs I've written so far. 
                     </p>
                 </div>
                 <Container>
-                    <Row>
-                        {blogs.length &&
-                            blogs.map((blog) => (
-                            <BlogCard
-                                image={blog.image}
-                                title={blog.title}
-                                description={blog.description}
-                                siteLink={blog.siteLink}
-                            />
-                        ))}
+                    <Row> 
+                    { blogs.map((blog) => (
+                        <BlogCard
+                            key={blog._id}
+                            image={blog.image}
+                            title={blog.title}
+                            description={blog.description}
+                            siteLink={blog.link}
+                        />
+                    ))}
                     </Row>
                 </Container> 
             </div>

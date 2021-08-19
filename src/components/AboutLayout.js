@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import{Container, Row, Col, Card, Image} from 'react-bootstrap';
-import aboutPic from '../pics/one.jpg';
-// import starPic from '../pics/star.JPG'
+import{Container, Row, Col, Image} from 'react-bootstrap';
+import devPic from '../pics/dev.png';
+import laptopPic from '../pics/laptop.png'
 import FooterLayout from './FooterLayout';
 import axios from 'axios';
 import env from 'react-dotenv';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faNodeJs, faHtml5, faJsSquare } from "@fortawesome/free-brands-svg-icons";
 
 let nameDesign = '<Nameere Olive Nives />';
 
@@ -14,7 +16,6 @@ const AboutLayout = ()=>{
     useEffect(()=>{
         axios.get(`${env.remoteApi}user/me/${env.myId}`)
         .then(res=>{
-            console.log(res.data)
             setBio(res.data.bio)
         })
     }, [])
@@ -29,13 +30,24 @@ const AboutLayout = ()=>{
                 <Container>
                     <Row>
                         <Col md={6}>
-                            <div><Image src={aboutPic} thumbnail className="pentagon-pic"/></div>
+                            <div><Image src={devPic} thumbnail className="pentagon-pic"/></div>
                         </Col>
-                        <Col md={6} className="biography">
-                            
+                        <Col md={6}>
+                            <div className="bio-section2">
+                                <p className="bio-section2-paragraph">I love creating things that <span className="squiggle">make</span> people's lives <span className="squiggle">simpler</span></p>
+                            </div>
+                            <Container>
+                            <Row className="skills-icons">
+                                <Col md={3} xs={3}><div><FontAwesomeIcon icon={faReact} size="4x"/></div></Col>
+                                <Col md={3} xs={3}><div><FontAwesomeIcon icon={faJsSquare} size="4x"/></div></Col>
+                                <Col md={3} xs={3}><div><FontAwesomeIcon icon={faNodeJs} size="4x"/></div></Col>
+                                <Col md={3} xs={3}><div><FontAwesomeIcon icon={faHtml5} size="4x"/></div></Col>
+                            </Row>
+                </Container>
                         </Col>
                     </Row>
                 </Container>
+                
             </div>
             <FooterLayout/>
        </>

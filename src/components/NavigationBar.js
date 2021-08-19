@@ -46,7 +46,7 @@ const NavigationBar = ()=>{
         <>
         <Navbar collapseOnSelect expand="lg" fixed="top" variant="dark">
             <Container fluid>
-                <Navbar.Brand href="#home" className="logo-brand"><img src={logo} alt="my logo" className='logo-nav'/></Navbar.Brand>
+                <Navbar.Brand href="/" className="logo-brand"><img src={logo} alt="my logo" className='logo-nav'/></Navbar.Brand>
                 <Navbar.Brand><Form.Check onChange={changeTheme} type='switch' label={<FontAwesomeIcon icon={isDark ? faSun : faMoon} size="1x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
