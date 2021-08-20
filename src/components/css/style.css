@@ -284,9 +284,7 @@ body{
 }
 
 /* contact section */
-.contact-me{
 
-}
 .form-control{
     background-color: var(--form-bg-color);
     color: var(--form-txt-color);

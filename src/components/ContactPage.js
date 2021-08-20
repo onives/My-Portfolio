@@ -59,7 +59,7 @@ const ContactPage = ({history})=>{
                         </div>
                     </Col>
                     <Col md={6}>
-                    <Form onSubmit={submitHandler} method="post" action="/contact">
+                    <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Your Name:</Form.Label>
                             <Form.Control value={name} type="text" placeholder="Enter Full Name" onChange={(e)=>{setName(e.target.value)}}/>
