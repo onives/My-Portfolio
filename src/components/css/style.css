@@ -93,7 +93,13 @@ body{
     color: var(--btn-txt-color) !important;
     text-shadow: 2px 2px 0px rgba(26, 25, 25, 0.5);
 }
-
+/* .navbar-nav .nav-link{
+    padding-right: auto !important;
+    padding-left: auto !important;
+} */
+.centered-icon{
+    text-align: center;
+}
 /* generic styles*/
 .titles{
     font-family: 'Changa', sans-serif;
@@ -323,7 +329,7 @@ body{
 }
 
 /* media queries */
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 1024px){
     .container-div{
         margin-top: 8rem;
         margin-bottom: 5rem;
@@ -369,4 +375,6 @@ body{
     .bio-section2-paragraph{
         font-size: 1.8rem;
     }
+    
+    
 }

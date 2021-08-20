@@ -11,18 +11,7 @@ const ContactPage = ({history})=>{
     const [success, setSuccess] = useState(false);
     const [failure, setFailure] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [wrongEmail, setWrongEmail] = useState(false);
 
-    const handleEmailChange = (e)=>{
-        //check if input is not empty string
-        if(!!e.target.value || !e.target.value.includes('@')){
-            setWrongEmail(true)
-            setTimeout(()=>{
-                setWrongEmail(false)
-            }, 5000)
-        }
-        setEmail(e.target.value);
-    }
 
     const submitHandler =  (e)=>{
         e.preventDefault()
@@ -32,7 +21,7 @@ const ContactPage = ({history})=>{
       
         setTimeout(()=>{
             setSuccess(false)
-            history.push('/')
+            history.push('/contact')
         }, 5000)
 
         setTimeout(()=>{
@@ -77,13 +66,10 @@ const ContactPage = ({history})=>{
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Your Email:</Form.Label>
-                            <Form.Control value={email} type="email" placeholder="Enter email" onChange={handleEmailChange} />
+                            <Form.Control value={email} type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}} />
                             <Form.Text className="text-muted">
                                 I'll never share your email with anyone else.
                             </Form.Text>
-                            {wrongEmail && <Form.Text className="text-muted wrong-email">
-                                Enter Valid Email
-                            </Form.Text>}
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Your message:</Form.Label>

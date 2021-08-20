@@ -11,7 +11,6 @@ const BlogsLayout = ()=>{
     useEffect(()=>{
         axios.get(`${env.remoteApi}blogs/me/${env.myId}`)
         .then(res=>{
-            console.log(res.data)
             setBlogs(res.data)
         })
        }, [])

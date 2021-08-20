@@ -12,7 +12,7 @@ const FooterLayout = ()=>{
         <div id="footer">
             <Container>
                 <Row className="justify-content-center text-center">
-                    <Col md={12}><p className="footer-p">&copy; {dateNow} Created with <FontAwesomeIcon icon={faHeart} size="0.9x"/> by Nives</p></Col> 
+                    <Col md={12}><p className="footer-p">&copy; {dateNow} Created with <FontAwesomeIcon icon={faHeart} size="sm"/> by Nives</p></Col> 
                 </Row>  
             
             </Container>

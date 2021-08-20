@@ -50,16 +50,16 @@ const NavigationBar = ()=>{
                 <Navbar.Brand><Form.Check onChange={changeTheme} type='switch' label={<FontAwesomeIcon icon={isDark ? faSun : faMoon} size="1x" style={{color:'#ffbd39'}}/>} id='switch-mode'/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ml-auto py-2">
-                        <LinkContainer to='/'><Nav.Link className="px-4">about</Nav.Link></LinkContainer>
-                        <LinkContainer to='projects'><Nav.Link className="px-4" >projects</Nav.Link></LinkContainer>
-                        <LinkContainer to='blogs'><Nav.Link className="px-4">blogs</Nav.Link></LinkContainer>
-                        <LinkContainer to='contact'><Nav.Link className="px-4" >contact 👋</Nav.Link></LinkContainer>
+                    <Nav className="ml-auto py-1">
+                        <LinkContainer to='/'><Nav.Link className="px-4">About</Nav.Link></LinkContainer>
+                        <LinkContainer to='projects'><Nav.Link className="px-4" >Projects</Nav.Link></LinkContainer>
+                        <LinkContainer to='blogs'><Nav.Link className="px-4">Blogs</Nav.Link></LinkContainer>
+                        <LinkContainer to='contact'><Nav.Link className="px-4" >Contact 👋</Nav.Link></LinkContainer>
                         
                         <Row className="justify-content-center">
-                            <Col><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="2x"/></Nav.Link></Col>
-                            <Col><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="2x"/></Nav.Link></Col>
-                            <Col><Nav.Link href="https://www.instagram.com/nives__olive/?hl=en" target='_blank'><FontAwesomeIcon icon={faInstagram} size="2x"/></Nav.Link></Col>
+                            <Col className="centered-icon"><Nav.Link href="https://twitter.com/nives__olive" target='_blank'><FontAwesomeIcon icon={faTwitter} size="lg"/></Nav.Link></Col>
+                            <Col className="centered-icon"><Nav.Link href="https://www.linkedin.com/in/olive-nives-nameere" target='_blank'><FontAwesomeIcon icon={faLinkedin} size="lg"/></Nav.Link></Col>
+                            <Col className="centered-icon"><Nav.Link href="https://www.instagram.com/nives__olive/?hl=en" target='_blank'><FontAwesomeIcon icon={faInstagram} size="lg"/></Nav.Link></Col>
                         
                         </Row>   
                     </Nav>

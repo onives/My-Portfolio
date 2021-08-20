@@ -5,7 +5,7 @@ const BlogCard = ({image, title, description, siteLink})=>{
 
     return(
         <>
-        <Col className="card-column" md={4} sm={12}>
+        <Col className="card-column" lg={4} md={6}>
             <Card className="blog-card">
             <Card.Img variant="top" src={image} />
                 <Card.Body>

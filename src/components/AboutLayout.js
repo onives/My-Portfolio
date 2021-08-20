@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import{Container, Row, Col, Image} from 'react-bootstrap';
 import devPic from '../pics/dev.png';
-import laptopPic from '../pics/laptop.png'
 import FooterLayout from './FooterLayout';
 import axios from 'axios';
 import env from 'react-dotenv';
@@ -29,10 +28,10 @@ const AboutLayout = ()=>{
                 </div>
                 <Container>
                     <Row>
-                        <Col md={6}>
+                        <Col lg={6} md={12}>
                             <div><Image src={devPic} thumbnail className="pentagon-pic"/></div>
                         </Col>
-                        <Col md={6}>
+                        <Col lg={6} md={12}>
                             <div className="bio-section2">
                                 <p className="bio-section2-paragraph">I love creating things that <span className="squiggle">make</span> people's lives <span className="squiggle">simpler</span></p>
                             </div>
